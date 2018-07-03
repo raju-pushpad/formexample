@@ -1,0 +1,26 @@
+<%= form_for @registration, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  Name: <%= f.text_field :name %><br />
+ 	Contact: <%= f.number_field :contact %> </br>
+ 	Gender : 
+ 	<%= f.label :gender, "Male" %>
+ 	<%= f.radio_button :gender, "male" %>
+ 	<%= f.label :gender, "Female" %>
+ 	<%= f.radio_button :gender, "female" %></br>
+ 	<%= f.label :skills %>
+ 	<%= f.check_box :skills, {multiple: true}, "C" %>C
+ 	<%= f.check_box :skills, {multiple: true}, "Java" %>Java
+ 	<br>
+ 	<%= f.label :education %> 
+ 	<%= f.select :education, ['12th','BA','BSC','BE' ] %></br>
+ 	<%= f.label :about_you, "Abount You" %> : <%= f.text_area :aboutyou, size: '10*5' %></br>
+ 	<%= f.label :description, "Description" %>
+ 
+ 	<%= f.text_area :description, rows: 5, cols: 5, :class => "tinymce" %>
+    </br>
+    <%= f.label :description1 %>
+    <%= f.text_area :description1, :class => 'ckeditor' %>
+    <%= f.submit %>
+<% end %>	 
+<!-- = javascript_include_tag Ckeditor.cdn_url -->
+
+<%= tinymce %>

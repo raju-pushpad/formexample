@@ -1,0 +1,9 @@
+<p>Name: <%= @record.name %></p>
+<p>Contact: <%= @record.contact %></p>
+<p>Education: <%= @record.education %></p>
+<p>Gender: <%= @record.gender %></p>
+<p>Skills: <%= @record.skills %> </p>
+<p>About you: <%= @record.aboutyou %> </p>
+<p>Description: <%= raw @record.description %> </p>
+<%= link_to "Add More data", new_user_path %>
+<%= link_to "View All Data", new_user_path %>
